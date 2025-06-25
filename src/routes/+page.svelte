@@ -6,7 +6,7 @@
 <hr class="mt-1 w-18 border-gray-600" />
 
 <div class="mt-4 flex flex-wrap gap-16">
-	<LetterBucket name="maeve's mailbox" />
+	<LetterBucket displayName="maeve's mailbox" mailboxName="maeve" />
 
-	<LetterBucket name="public mailbox" />
+	<LetterBucket displayName="public mailbox" mailboxName="public" />
 </div>
