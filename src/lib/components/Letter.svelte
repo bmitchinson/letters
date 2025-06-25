@@ -34,7 +34,7 @@
 			>
 		</p>
 		{#if isOpen}
-			<p>{letter.content}</p>
+			<p style="white-space: pre-wrap;">{letter.content}</p>
 		{/if}
 	</div>
 </div>
