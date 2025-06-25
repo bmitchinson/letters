@@ -16,6 +16,19 @@ export const openLetter = `
 │_____________________│
 `;
 
+export const closedLetter = `
+ --------------------- 
+│ \\                  /│
+│   \\              /  │
+│     \\          /    │
+│       \\      /      │
+│         \\  /        │
+│          ♥          │
+│                     │
+│                     │
+│_____________________│
+`;
+
 export const mailBoxWFlagUp = `
    [][][]                   
    [][]                     

@@ -29,10 +29,17 @@ export class Database {
 			);
 	}
 
-	// async createMailbox(name: string, password: string) {
-	// 	return await this.db
-	// 		.prepare('INSERT INTO mailboxes (name, password) VALUES (?, ?)')
-	// 		.bind(name, password)
-	// 		.run();
-	// }
+	async insertLetter(
+		mailboxName: string,
+		content: string,
+		to: string,
+		from: string
+	): Promise<void> {
+		await this.db
+			.prepare(
+				'INSERT INTO letters (mailbox_id, content, `to`, `from`) VALUES ((SELECT id FROM mailboxes WHERE name = ?), ?, ?, ?)'
+			)
+			.bind(mailboxName, content, to, from)
+			.run();
+	}
 }
