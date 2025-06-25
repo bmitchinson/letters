@@ -1,13 +1,22 @@
 <script lang="ts">
 	import { closedLetter, openLetter } from '$lib/ascii.js';
 	import type { Letter } from '../database';
+	import { onMount } from 'svelte';
 
 	export let letter: Letter;
 
 	let isOpen = false;
 
+	onMount(() => {
+		const savedState = localStorage.getItem(`letter-${letter.id}-open`);
+		if (savedState !== null) {
+			isOpen = JSON.parse(savedState);
+		}
+	});
+
 	function toggleLetter() {
 		isOpen = !isOpen;
+		localStorage.setItem(`letter-${letter.id}-open`, JSON.stringify(isOpen));
 	}
 </script>
 
