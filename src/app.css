@@ -3,3 +3,13 @@
 body {
   font-family: 'Times New Roman', Times, serif;
 }
+
+h1 {
+  font-size: x-large;
+}
+
+.ascii-art {
+  font-family: monospace;
+  white-space: pre;
+  line-height: 1;
+}
