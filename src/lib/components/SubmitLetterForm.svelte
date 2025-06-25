@@ -1,8 +1,7 @@
 <script>
 	import { enhance } from '$app/forms';
 
-	export let form;
-
+	let form;
 	let isSubmitting = false;
 </script>
 
@@ -39,7 +38,7 @@
 					name="from"
 					required
 					class=" w-full border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-					placeholder="Your name"
+					placeholder="from"
 				/>
 			</div>
 			<div>
@@ -50,7 +49,7 @@
 					name="to"
 					required
 					class=" w-full border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-					placeholder="Recipient's name"
+					placeholder="to"
 				/>
 			</div>
 		</div>
