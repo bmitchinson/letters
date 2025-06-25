@@ -31,7 +31,7 @@
 >
 	<div class="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
 		<div>
-			<label for="from" class="mb-1 block text-sm font-medium text-gray-700">From:</label>
+			<label for="from" class="mb-1 block text-sm font-medium text-gray-700">from</label>
 			<input
 				type="text"
 				id="from"
@@ -42,7 +42,7 @@
 			/>
 		</div>
 		<div>
-			<label for="to" class="mb-1 block text-sm font-medium text-gray-700">To:</label>
+			<label for="to" class="mb-1 block text-sm font-medium text-gray-700">to</label>
 			<input
 				type="text"
 				id="to"
@@ -55,15 +55,14 @@
 	</div>
 
 	<div class="mb-4">
-		<label for="content" class="mb-1 block text-sm font-medium text-gray-700">Letter content:</label
-		>
+		<label for="content" class="mb-1 block text-sm font-medium text-gray-700">letter content</label>
 		<textarea
 			id="content"
 			name="content"
 			required
 			rows="4"
 			class=" w-full border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-			placeholder="Write your letter here..."
+			placeholder="message here ..."
 		></textarea>
 	</div>
 
@@ -72,6 +71,6 @@
 		disabled={isSubmitting}
 		class="bg-pink-300 px-6 py-2 hover:bg-pink-200 disabled:cursor-not-allowed disabled:opacity-50"
 	>
-		{isSubmitting ? 'Sending...' : 'Send Letter'}
+		{isSubmitting ? 'Sending...' : 'send'}
 	</button>
 </form>

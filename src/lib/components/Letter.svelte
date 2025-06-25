@@ -20,12 +20,12 @@
 	}
 </script>
 
-<div class="flex w-full items-center gap-8" on:click={toggleLetter} role="button" tabindex="0">
+<div class="flex w-full items-start gap-8" on:click={toggleLetter} role="button" tabindex="0">
 	<div class="ascii-art">
 		<p>{isOpen ? openLetter : closedLetter}</p>
 	</div>
 
-	<div class="letter w">
+	<div class="letter w min-w-0 flex-1">
 		<p><strong>to:</strong> {letter.to}</p>
 		<p><strong>from:</strong> {letter.from}</p>
 		<p class="my-4">
@@ -43,7 +43,11 @@
 			>
 		</p>
 		{#if isOpen}
-			<p style="white-space: pre-wrap;">{letter.content}</p>
+			<p
+				style="white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; max-width: 80%;"
+			>
+				{letter.content}
+			</p>
 		{/if}
 	</div>
 </div>
