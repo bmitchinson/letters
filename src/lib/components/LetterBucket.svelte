@@ -8,6 +8,7 @@
 
 	let { displayName, mailboxName }: Props = $props();
 	let isHovered = $state(false);
+	// note: i could do this w css and avoid js but fine for now
 </script>
 
 <a
