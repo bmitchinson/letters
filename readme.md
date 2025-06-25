@@ -1,14 +1,20 @@
 A site to post notes!
 
-More info in docs.
+### Demo
 
-letters.mitchinson.dev
+https://letters.mitchinson.dev ☁️ 🌐
 
-Checkout the 'demo' letters bucket
+![](/static/header.jpg)
+
+### Tech
 
 - sveltekit
 - cloudflare workers / d1
 
-todo:
+### Notes
 
 - I wish I could rate limit in a way that didn't suck / cost money / weird cloud flare configuration
+
+### AI
+
+- ASCII art by me + authentication by claud w vscode agent mode with almost no review. Great priorities.

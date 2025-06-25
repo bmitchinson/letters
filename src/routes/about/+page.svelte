@@ -5,7 +5,8 @@
 <div class="flex flex-col gap-4">
 	<p>
 		Hello, this is a cloudflare site built with sveltekit to send messages to my girlfriend while
-		she has no cell service, but does have access to a communal computer.
+		she has no cell service, but does have access to a communal computer. More details below on my
+		blog.
 	</p>
 
 	<!-- <h2 class="text-lg">Recording Process</h2>
@@ -36,6 +37,9 @@
 			class={blueLink}>this object</a
 		>, and the site builds out pages dynamically from there.
 	</p> -->
+	<p>
+		<a class={blueLink} href="https://blog.mitchinson.dev/letters">Blog Post</a>
+	</p>
 	<p>
 		<a class={blueLink} href="https://github.com/bmitchinson/letters">GitHub - Source Code</a>
 	</p>
