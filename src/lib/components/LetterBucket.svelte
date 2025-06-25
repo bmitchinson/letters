@@ -14,8 +14,8 @@
 <a
 	href="/mailbox/{mailboxName}"
 	class="ascii-art block"
-	on:mouseenter={() => (isHovered = true)}
-	on:mouseleave={() => (isHovered = false)}
+	onmouseenter={() => (isHovered = true)}
+	onmouseleave={() => (isHovered = false)}
 >
 	{@html (isHovered ? mailBoxWFlagUp : mailBoxWFlagDown).replace(
 		'{replace}',
