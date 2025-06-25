@@ -26,6 +26,10 @@
 
 	<button type="submit" class={blueLink}> open mailbox </button>
 
+	{#if mailboxName === 'public'}
+		<p class="mt-4 italic">Psst: You’re on the public mailbox, its password is “demo”!</p>
+	{/if}
+
 	{#if error}
 		<div class="mt-4 rounded-md bg-red-50 p-3 text-sm text-red-700">
 			{error}
