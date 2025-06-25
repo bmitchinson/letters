@@ -6,7 +6,7 @@
 </script>
 
 <h1>{data.mailboxName} mailbox</h1>
-<hr class="mt-1 mb-8 w-18 border-gray-600" />
+<hr class="mt-1 mb-12 w-18 border-gray-600" />
 
 <div class="flex flex-wrap items-center gap-x-16">
 	<div class="mb-8 min-w-sm self-start border border-gray-300 p-6">
