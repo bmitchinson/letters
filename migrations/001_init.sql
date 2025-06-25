@@ -4,8 +4,8 @@
 
 /*
 npx wrangler d1 execute letters_db --command \
-"INSERT INTO mailboxes (name, password) VALUES ('maeve', 'examplepassword') ON CONFLICT(name) DO UPDATE SET password=excluded.password;" \
---env production
+"INSERT INTO mailboxes (name, password) VALUES ('maeve', 'exampleexample') ON CONFLICT(name) DO UPDATE SET password=excluded.password;" \
+--remote
 */
 
 CREATE TABLE mailboxes (
