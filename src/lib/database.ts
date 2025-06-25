@@ -10,6 +10,12 @@ export interface Letter {
 	created_at: Date;
 }
 
+export interface Mailbox {
+	id: number;
+	name: string;
+	password: string;
+}
+
 export class Database {
 	db: D1Database;
 
@@ -17,7 +23,20 @@ export class Database {
 		this.db = db;
 	}
 
-	async getLettersInMailbox(mailboxName: string): Letter[] {
+	async verifyMailboxPassword(mailboxName: string, password: string): Promise<boolean> {
+		const result = await this.db
+			.prepare('SELECT password FROM mailboxes WHERE name = ?')
+			.bind(mailboxName)
+			.first();
+
+		if (!result) {
+			return false; // Mailbox doesn't exist
+		}
+
+		return result.password === password;
+	}
+
+	async getLettersInMailbox(mailboxName: string): Promise<Letter[]> {
 		return await this.db
 			.prepare(
 				'SELECT * FROM letters WHERE mailbox_id = (SELECT id FROM mailboxes WHERE name = ?) ORDER BY created_at DESC'

@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	import { enhance } from '$app/forms';
 
-	let form;
+	export let form: any = null;
 	let isSubmitting = false;
 </script>
 
@@ -21,6 +21,7 @@
 
 <form
 	method="POST"
+	action="?/submitLetter"
 	use:enhance={() => {
 		isSubmitting = true;
 		return async ({ update }) => {
