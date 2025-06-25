@@ -20,12 +20,13 @@
 	}
 </script>
 
+<!-- svelte-ignore a11y_click_events_have_key_events -->
 <div class="flex w-full items-start gap-8" on:click={toggleLetter} role="button" tabindex="0">
-	<div class="ascii-art">
-		<p>{isOpen ? openLetter : closedLetter}</p>
+	<div class="ascii-art mt-[-.7em]">
+		<div>{isOpen ? openLetter : closedLetter}</div>
 	</div>
 
-	<div class="letter w min-w-0 flex-1">
+	<div>
 		<p><strong>to:</strong> {letter.to}</p>
 		<p><strong>from:</strong> {letter.from}</p>
 		<p class="my-4">
@@ -43,9 +44,7 @@
 			>
 		</p>
 		{#if isOpen}
-			<p
-				style="white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; max-width: 80%;"
-			>
+			<p class="max-w-35 break-words whitespace-pre-wrap sm:max-w-90">
 				{letter.content}
 			</p>
 		{/if}
