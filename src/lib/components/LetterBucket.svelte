@@ -14,5 +14,8 @@
 	on:mouseenter={() => (isHovered = true)}
 	on:mouseleave={() => (isHovered = false)}
 >
-	{(isHovered ? mailBoxWFlagUp : mailBoxWFlagDown).replace('{replace}', name)}
+	{@html (isHovered ? mailBoxWFlagUp : mailBoxWFlagDown).replace(
+		'{replace}',
+		`<span class="${isHovered ? 'text-blue-800 underline' : ''}">${name}</span>`
+	)}
 </div>
